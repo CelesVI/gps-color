@@ -1,0 +1,277 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/ubicacionActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ubicacionActual"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5sp"
+        />
+
+    <TextView
+        android:id="@+id/coordenada_X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buscando"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ubicacionActual"
+        />
+
+    <TextView
+        android:id="@+id/coordenada_Y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/coordenada_X"
+        />
+
+    //______________________________________________________________________________________________
+
+    <RelativeLayout
+        android:id="@+id/layoutCasa"
+        android:layout_below="@+id/coordenada_Y"
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sinPosicion"
+
+        >
+
+        <TextView
+            android:id="@+id/casa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/casa"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_casa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/casa"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/estasA_casa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estas_a"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/distCasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15sp"
+                android:layout_marginStart="3sp"
+                android:layout_toRightOf="@+id/estasA_casa"/>
+
+
+            <TextView
+                android:id="@+id/metros_casa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/metros"
+                android:textSize="15sp"
+                android:layout_marginStart="3sp"
+                android:layout_toRightOf="@+id/distCasa"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sinUbicacionCasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/casa"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:id="@+id/botonCasa"
+            android:layout_width="120sp"
+            android:layout_height="40dp"
+            android:background="@drawable/icono_mapa_esperando"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearlayout_casa"
+            android:onClick="definirCasa"
+            android:enabled="false"/>
+
+    </RelativeLayout> //Layout Casa
+
+    <RelativeLayout
+        android:id="@+id/layoutTrabajo"
+        android:layout_below="@+id/layoutCasa"
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sinPosicion"
+        >
+
+        <TextView
+            android:id="@+id/trabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trabajo"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_trabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trabajo"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/estasA_trabajo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estas_a"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/distTrabajo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15sp"
+                android:layout_marginStart="3sp"
+                android:layout_toRightOf="@+id/estasA_trabajo"/>
+
+
+            <TextView
+                android:id="@+id/metros_trabajo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/metros"
+                android:textSize="15sp"
+                android:layout_marginStart="3sp"
+                android:layout_toRightOf="@+id/distTrabajo"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sinUbicacionTrabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trabajo"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:id="@+id/botonTrabajo"
+            android:layout_width="120sp"
+            android:layout_height="40dp"
+            android:background="@drawable/icono_mapa_esperando"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearlayout_trabajo"
+            android:onClick="definirTrabajo"
+            android:enabled="false"/>
+
+    </RelativeLayout> //Layout Trabajo
+
+    <RelativeLayout
+        android:id="@+id/layoutFacultad"
+        android:layout_below="@+id/layoutTrabajo"
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sinPosicion"
+        >
+
+        <TextView
+            android:id="@+id/facultad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/facultad"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_facultad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/facultad"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/estasA_facultad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estas_a"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/distFacultad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15sp"
+                android:layout_marginStart="3sp"
+                android:layout_toRightOf="@+id/estasA_facultad"/>
+
+
+            <TextView
+                android:id="@+id/metros_facultad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/metros"
+                android:textSize="15sp"
+                android:layout_marginStart="3sp"
+                android:layout_toRightOf="@+id/distFacultad"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sinUbicacionFacultad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/facultad"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:id="@+id/botonFacultad"
+            android:layout_width="120sp"
+            android:layout_height="40dp"
+            android:background="@drawable/icono_mapa_esperando"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearlayout_facultad"
+            android:onClick="definirFacultad"
+            android:enabled="false"/>
+
+    </RelativeLayout> //Layout Facultad
+
+</RelativeLayout>

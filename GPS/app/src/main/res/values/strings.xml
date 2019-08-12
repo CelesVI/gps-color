@@ -1,0 +1,13 @@
+<resources>
+<string name="app_name">Posicionamiento GPS</string>
+<string name="ubicacionActual">Ubicación Actual:</string>
+<string name="casa">Casa</string>
+<string name="trabajo">Trabajo</string>
+<string name="facultad">Facultad</string>
+<string name="estas_a">Estás a</string>
+<string name="metros">metros</string>
+<string name="sinUbicacion">Aún no se ha declarado una ubicación</string>
+<string name="buscando">Buscando...</string>
+<string name="esperando">Esperando señal GPS...</string>
+<string name="actualizando">Actualizando...</string>
+</resources>
